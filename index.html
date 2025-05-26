@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt"> <!-- Inicia o código HTML e indica que o idioma é português -->
+<head> <!-- Parte do documento que configura o título e liga ficheiros -->
+  <meta charset="UTF-8"> <!-- Permite usar acentos e caracteres especiais -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna o site responsivo em todos os ecrãs -->
+  <title>Lista de Tarefas</title> <!-- Definir como titlo lista de tarefas -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> <!-- Link para importar a fonte "Poppins" do Google Fonts -->
+  <link rel="stylesheet" href="style.css"> <!-- Liga o comado CSS -->
+</head>
+<body> <!-- Tudo o que está visível na página -->
+  <div class="container"> <!-- Container principal da aplicação -->
+    <img src="https://cdn-icons-png.flaticon.com/512/9124/9124141.png" alt="Icone Lista" width="60"> <!-- Imagem decorativa no topo (ícone da lista) -->
+    <h1>Minha Lista de Tarefas</h1>  <!-- Título principal da aplicação -->
+    <input id="novaTarefa" type="text" placeholder="Escreva uma tarefa"> <!-- input=Caixa onde o utilizador escreve a tarefa -->
+    <input id="dataTarefa" type="date"> <!-- Novo campo para data -->
+    <button onclick="adicionarTarefa()">Adicionar</button> <!-- Button = botão para adicionar a tarefa -->
+    <ul id="listaTarefas"></ul> <!-- Lista de Tarefas -->
+  </div>
+  
+  <script src="script.js"></script> <!-- Liga o ficheiro com o código Javascript -->
+</body>
+</html>
