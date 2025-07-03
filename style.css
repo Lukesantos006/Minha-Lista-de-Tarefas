@@ -1,0 +1,275 @@
+css
+
+body   { 
+  background-image: url('https://cdn.pixabay.com/photo/2015/06/19/21/24/avenue-815297_1280.jpg');
+  background-size: cover; /* A imagem cobre toda a tela */
+  background-position: center;
+  font-family: 'Poppins', Arial, sans-serif;  /* Define a fonte principal */
+  margin: 0; /* Remove margem externa */
+  padding: 0; /* Remove preenchimento externo */
+}
+
+/* Estilo do bloco principal onde tudo está contido */
+.container {
+  background-color: rgba(255, 255, 255, 0.95); /* Fundo claro */
+  padding: 20px;
+  border-radius: 16px;
+  border: 2px solid #b56efc;
+  max-width: 600px; /* Um pouco mais largo para acomodar melhor inputs */
+  margin: 40px auto;
+  text-align: center;
+  display: flex; /* Novo: flexbox para organizar verticalmente */
+  gap: 20px; /* Espaço entre elementos */
+  align-items: center;
+  width: 800px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  flex-direction: row;
+}
+  
+h1 {
+  color: #333;
+  font-size: 40px;
+  margin-bottom: 20px; /* Espaço abaixo do título */
+  text-align: center;
+  
+}
+  
+input[type="text"] {
+  padding: 10px;
+  width: 400px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  size: 300px;
+}
+  
+button {
+  font-size: 16px;
+  padding: 12px 20px; /* Espaçamento interno: cima/baixo e lados */
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer; /* Cursor em forma de mão ao passar por cima */
+  transition: background-color 0.3s ease; /* Efeito de transição suave */
+  margin-top: 10px /* Espaço à esquerda do botão */
+   
+}
+ 
+/* Efeito de passar o rato por cima do botão de adicionar */
+button:hover {
+  background-color: #45a049;
+}
+
+/* Remove os pontos da lista padrão */
+ul {
+  margin-top: 30px;
+  list-style-type: none;
+  padding: 0;
+}
+  
+li {
+  font-size: 25px;
+  padding: 12px 16px; /* Espaçamento interno: cima/baixo e lados */
+  background-color: white;
+  justify-content: space-between;  /* Espaço entre o texto e o botão */
+  display: flex; /* Alinha texto e botão na mesma linha */
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+  border-left: 4px solid #4CAF50;
+  border-radius: 8px; /* Cantos arredondados */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */ 
+}
+  
+li button {
+  background-color: #ff4d4d;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  font-size: 22px;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.finished{
+  background-color: #24af12;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  font-size: 22px;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+
+}
+
+.remove{
+  background-color: #ff4d4d;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  font-size: 22px;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+
+}
+
+.edit{
+  background-color: #f5f820;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  font-size: 22px;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.finished:hover {
+  background-color: #056d02;
+}
+
+.remove:hover {
+  background-color: #860404;
+}
+
+.edit:hover {
+  background-color: #9ca709;
+}
+
+select /*Novo botão da prioridade*/ {
+  padding: 10px;
+  width: 70%;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.todo-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.todo-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.todo-icon {
+  width:100px;
+  height: auto;
+}
+
+#filtroContadorWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+#filtroEstadoTarefas {
+  flex: 1;
+  max-width: 150px;
+}
+
+#contadorPendentes {
+  font-weight: bold;
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 30px 15px;
+    padding: 20px;
+  }
+
+  input[type="text"],
+  select,
+  button {
+    width: 100% !important; /* Garante largura total */
+  }
+
+  #filtroContadorWrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+/* Novo grupo para o seletor de filtros com ícone */
+.filtro-wrapper {
+  align-items: center;
+  gap: 6px;
+  background: rgb(255, 255, 255);
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  padding: 6px 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  font-size: 14px;
+  width: 200px;
+  justify-content: space-between;
+  float:right;
+  flex-shrink: 0;
+}
+
+
+  
+
+/* Reduz o seletor de filtros sem afetar os outros selects */
+.filtro-wrapper select {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 20px; /* Igual ao wrapper */
+  cursor: pointer;
+  margin-left: 20px;
+  
+
+}
+
+/* Ícone SVG com tamanho ajustado */
+.filtro-wrapper svg {
+  width: 18px;
+  height: 18px;
+  fill: #333;
+}
+
+.ContadorPendentes{
+  margin-right: 550px;
+
+}
+
+.filtro-Contador{
+  display: flex;
+  flex-direction: row;
+}
+
+.Dataeprioridade{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.prioridade{
+  width: 350px ;
+
+}
+
+.Data{
+  width: 100px;
+  font-size: 10px;
+  padding: 5px;
+}
+
+
+
+  /*body = fundo da página h1= Estilo do título input=Define tamanho e espaçamento da caixa de texto 
+  button= Estilo do botão "Adicionar" ul=Remove os marcadores padrão das listas
+  li=estilo de cada tarefa na lista li button= Estilo do botão "X" que remove a tarefa
